@@ -1,0 +1,212 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Lato:wght@300;400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Lato',sans-serif;background:#fff;color:#1a1a1a;overflow-x:hidden;}
+
+nav{background:#fff;border-bottom:1px solid #f0e0d0;padding:14px 48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-logo{display:flex;align-items:center;gap:12px;}
+.nav-logo img{width:48px;height:48px;object-fit:contain;border-radius:50%;}
+.nav-brand{display:flex;flex-direction:column;line-height:1.1;}
+.nav-brand span:first-child{font-family:'Lato',sans-serif;font-size:10px;color:#F47920;letter-spacing:3px;text-transform:uppercase;}
+.nav-brand span:last-child{font-family:'Great Vibes',cursive;font-size:28px;color:#F47920;}
+.nav-cta{background:#F47920;color:#fff;font-family:'Great Vibes',cursive;font-size:20px;padding:10px 32px;border-radius:3px;text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:#d96510;}
+
+.hero{background:#F47920;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:64px 72px;min-height:88vh;}
+.hero-left{color:#fff;}
+.hero-eyebrow{font-family:'Lato',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;opacity:0.75;display:block;margin-bottom:18px;}
+.hero-title{font-family:'Great Vibes',cursive;font-size:96px;color:#fff;line-height:1.05;margin-bottom:20px;}
+.hero-divider{width:56px;height:2px;background:rgba(255,255,255,0.45);margin-bottom:22px;}
+.hero-text{font-family:'Lato',sans-serif;font-size:17px;font-weight:300;line-height:1.85;opacity:0.9;margin-bottom:40px;max-width:400px;}
+.hero-btn{display:inline-block;background:#fff;color:#F47920;font-family:'Great Vibes',cursive;font-size:26px;padding:13px 44px;border-radius:3px;text-decoration:none;font-weight:400;box-shadow:0 2px 18px rgba(0,0,0,0.13);transition:transform 0.2s,box-shadow 0.2s;}
+.hero-btn:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(0,0,0,0.18);}
+.hero-right{display:flex;justify-content:center;align-items:center;}
+.hero-logo-ring{width:300px;height:300px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;}
+.hero-logo-ring img{width:230px;height:230px;object-fit:contain;border-radius:50%;}
+
+.strip{display:grid;grid-template-columns:repeat(3,1fr);background:#1a1a1a;}
+.strip-item{padding:32px 28px;border-right:1px solid rgba(255,255,255,0.07);text-align:center;}
+.strip-item:last-child{border-right:none;}
+.strip-label{font-family:'Great Vibes',cursive;font-size:26px;color:#F47920;margin-bottom:6px;}
+.strip-text{font-size:13px;color:rgba(255,255,255,0.5);font-weight:300;line-height:1.6;}
+
+.section{padding:80px 72px;}
+.section-eyebrow{font-family:'Lato',sans-serif;font-size:11px;color:#F47920;letter-spacing:3px;text-transform:uppercase;display:block;margin-bottom:10px;}
+.section-title{font-family:'Great Vibes',cursive;font-size:60px;color:#1a1a1a;line-height:1.1;margin-bottom:14px;}
+.section-rule{width:52px;height:2px;background:#F47920;margin-bottom:52px;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+.col-card{background:#fff;border:1px solid #f0e0d0;padding:44px 28px 36px;position:relative;overflow:hidden;transition:border-color 0.25s;}
+.col-card:hover{border-color:#F47920;}
+.col-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:#F47920;transition:height 0.3s;}
+.col-card:hover::before{height:100%;}
+.col-num{font-family:'Lato',sans-serif;font-size:11px;color:#ddd;letter-spacing:2px;margin-bottom:28px;display:block;}
+.col-title{font-family:'Great Vibes',cursive;font-size:36px;color:#F47920;margin-bottom:10px;}
+.col-text{font-size:14px;color:#777;line-height:1.8;font-weight:300;}
+
+.section-alt{padding:80px 72px;background:#faf6f2;}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.why-text{font-size:17px;color:#555;line-height:1.9;font-weight:300;margin-top:20px;margin-bottom:36px;}
+.why-right{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.why-item{background:#fff;border:1px solid #f0e0d0;padding:28px 22px;}
+.why-item-title{font-family:'Great Vibes',cursive;font-size:28px;color:#F47920;margin-bottom:6px;}
+.why-item-text{font-size:13px;color:#888;line-height:1.7;font-weight:300;}
+
+.section-addr{padding:0 72px 80px;}
+.addr-inner{background:#F47920;display:grid;grid-template-columns:1fr 1fr;}
+.addr-left{padding:64px 56px;}
+.addr-eyebrow{font-family:'Lato',sans-serif;font-size:11px;color:rgba(255,255,255,0.65);letter-spacing:3px;text-transform:uppercase;display:block;margin-bottom:14px;}
+.addr-title{font-family:'Great Vibes',cursive;font-size:60px;color:#fff;margin-bottom:20px;}
+.addr-rule{width:48px;height:2px;background:rgba(255,255,255,0.35);margin-bottom:24px;}
+.addr-text{font-size:17px;color:rgba(255,255,255,0.9);line-height:2;font-weight:300;}
+.addr-text strong{color:#fff;font-weight:600;}
+.addr-right{background:#d96510;padding:64px 56px;display:flex;flex-direction:column;justify-content:center;}
+.addr-cta-label{font-family:'Great Vibes',cursive;font-size:36px;color:#fff;margin-bottom:10px;}
+.addr-cta-text{font-size:15px;color:rgba(255,255,255,0.8);line-height:1.75;font-weight:300;margin-bottom:30px;}
+.addr-btn{display:inline-block;background:#fff;color:#F47920;font-family:'Great Vibes',cursive;font-size:26px;padding:13px 40px;border-radius:3px;text-decoration:none;align-self:flex-start;transition:transform 0.2s;}
+.addr-btn:hover{transform:translateY(-2px);}
+
+footer{background:#1a1a1a;padding:36px 72px;display:flex;align-items:center;justify-content:space-between;}
+.footer-brand{font-family:'Great Vibes',cursive;font-size:36px;color:#F47920;}
+.footer-text{font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;text-align:right;line-height:1.9;}
+
+@media(max-width:860px){
+  nav{padding:14px 20px;}
+  .hero{grid-template-columns:1fr;padding:48px 24px;min-height:auto;text-align:center;}
+  .hero-right{display:none;}
+  .hero-title{font-size:68px;}
+  .hero-text{margin:0 auto 32px;}
+  .strip{grid-template-columns:1fr;}
+  .strip-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.07);}
+  .section,.section-alt,.section-addr{padding:56px 20px;}
+  .grid-4{grid-template-columns:1fr 1fr;}
+  .why-grid{grid-template-columns:1fr;}
+  .addr-inner{grid-template-columns:1fr;}
+  footer{flex-direction:column;gap:14px;padding:28px 20px;text-align:center;}
+  .footer-text{text-align:center;}
+}
+</style>
+
+<nav>
+  <div class="nav-logo">
+    <img src="data:image/png;base64,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" alt="Ótica Verones">
+    <div class="nav-brand">
+      <span>Óticas</span>
+      <span>Verones</span>
+    </div>
+  </div>
+  <a class="nav-cta" href="https://wa.me/message/5SGI6FDBZTNXD1?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank">Fale Conosco</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Londrina · Centro</span>
+    <h1 class="hero-title">Ótica Verones</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-text">Visão com qualidade e estilo para toda a família. Atendimento personalizado, lentes de excelência e armações para todos os gostos.</p>
+    <a class="hero-btn" href="https://wa.me/message/5SGI6FDBZTNXD1?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank">Agendar Consulta</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-logo-ring">
+      <img src="data:image/png;base64,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" alt="Ótica Verones">
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-item">
+    <p class="strip-label">Qualidade</p>
+    <p class="strip-text">Lentes e armações das melhores marcas nacionais e internacionais</p>
+  </div>
+  <div class="strip-item">
+    <p class="strip-label">Atendimento</p>
+    <p class="strip-text">Equipe especializada para encontrar o óculos ideal para você</p>
+  </div>
+  <div class="strip-item">
+    <p class="strip-label">Tradição</p>
+    <p class="strip-text">Anos servindo famílias londrinenses com excelência e cuidado</p>
+  </div>
+</div>
+
+<section class="section">
+  <span class="section-eyebrow">Nossas coleções</span>
+  <h2 class="section-title">Óculos para toda a família</h2>
+  <div class="section-rule"></div>
+  <div class="grid-4">
+    <div class="col-card">
+      <span class="col-num">01</span>
+      <p class="col-title">Infantil</p>
+      <p class="col-text">Armações resistentes, leves e coloridas desenvolvidas para o dia a dia das crianças com segurança e conforto.</p>
+    </div>
+    <div class="col-card">
+      <span class="col-num">02</span>
+      <p class="col-title">Masculino</p>
+      <p class="col-text">Do clássico ao contemporâneo, modelos para o homem que valoriza estilo e praticidade em sua rotina.</p>
+    </div>
+    <div class="col-card">
+      <span class="col-num">03</span>
+      <p class="col-title">Feminino</p>
+      <p class="col-text">Armações elegantes e modernas que acompanham as tendências com sofisticação e personalidade.</p>
+    </div>
+    <div class="col-card">
+      <span class="col-num">04</span>
+      <p class="col-title">Clipon</p>
+      <p class="col-text">Praticidade e versatilidade: use como óculos de grau ou solar com um simples encaixe, sem abrir mão do estilo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="why-grid">
+    <div class="why-left">
+      <span class="section-eyebrow">Por que nos escolher</span>
+      <h2 class="section-title">Cuidado com sua visão</h2>
+      <p class="why-text">Na Ótica Verones, cada cliente recebe atendimento único. Nossos especialistas orientam na escolha das lentes e armações ideais para o seu perfil, estilo de vida e necessidade visual.</p>
+      <a class="hero-btn" href="https://wa.me/message/5SGI6FDBZTNXD1?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank">Falar com especialista</a>
+    </div>
+    <div class="why-right">
+      <div class="why-item">
+        <p class="why-item-title">Exame de vista</p>
+        <p class="why-item-text">Avaliação completa com profissionais qualificados para a receita correta.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-item-title">Garantia</p>
+        <p class="why-item-text">Todos os produtos possuem garantia e suporte completo após a compra.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-item-title">Variedade</p>
+        <p class="why-item-text">Centenas de modelos para todas as idades, estilos e necessidades.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-item-title">Preço justo</p>
+        <p class="why-item-text">Ótimo custo-benefício com facilidade de pagamento para toda a família.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-addr">
+  <div class="addr-inner">
+    <div class="addr-left">
+      <span class="addr-eyebrow">Onde estamos</span>
+      <h2 class="addr-title">Visite nossa loja</h2>
+      <div class="addr-rule"></div>
+      <p class="addr-text">
+        <strong>Rua Prof. João Cândido, n° 134</strong><br>
+        Centro — Londrina / PR<br><br>
+        Venha experimentar pessoalmente nossas coleções e receber o atendimento que você merece.
+      </p>
+    </div>
+    <div class="addr-right">
+      <p class="addr-cta-label" style="margin-bottom:6px;">Atendimento Domiciliar</p>
+      <p class="addr-cta-text" style="margin-bottom:20px;">Atendemos também na sua casa! Entre em contato e agende uma visita com nossos especialistas.</p>
+      <p class="addr-cta-label">Fale conosco agora</p>
+      <p class="addr-cta-text">Tire dúvidas, solicite um orçamento ou agende sua visita diretamente pelo WhatsApp. Respondemos rapidamente.</p>
+      <a class="addr-btn" href="https://wa.me/message/5SGI6FDBZTNXD1?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank">Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="footer-brand">Ótica Verones</p>
+  <p class="footer-text">Rua Prof. João Cândido, 134 · Centro · Londrina / PR<br>© 2025 Ótica Verones · Todos os direitos reservados</p>
+</footer>
